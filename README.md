@@ -25,16 +25,16 @@ De applicatie werkt zonder server en slaat zijn data op als array in localStorag
 
 ```javascript
 class boodschappenlijst extends React.Component {
-	render() {
-		return React.createElement(“div”, null,”Hello World”)
-	}
+  render() {
+    return React.createElement(“div”, null,”Hello World”)
+  }
 }
 
 ReactDOM.render(
-	React.createElement(boodschappenlijst, null), document.body
+  React.createElement(boodschappenlijst, null), document.body
 );
 ```
-Zo bestaat je code uit een Class waar de logica van je applicatie in staat die return bepaalde elementen die getoond worden aan de gebruiker. Daarnaast heb je ReactDOM.render die de Class toont op het scherm. Dit is de basis die ik gebruik voor mijn applicatie.
+Hier boven staat de basis van mijn applicatie. Zo bestaat je code uit een Class waar de logica van je applicatie in staat die return bepaalde elementen die getoond worden aan de gebruiker. Daarnaast heb je ReactDOM.render die de waardes van de hoofd class toont op het scherm.
 
 ```javascript
 React.createElement(
@@ -46,10 +46,10 @@ React.createElement(
 Met de functie createElement maak je een HTML element aan. Hierbij kan je aangeven wat voor element het is en in dit geval is dat een div. Daarna kan je aangeven wat voor attributen het element kan hebben. Een element kan zichtbaar of onzichtbare attributen bevatten. Zo kan je aangeven wat bijvoorbeeld de key met zijn van een lijst. De key waarde kan je weet gebruiken in de logica van React, maar de gebruiker krijgt deze key nooit te zien.
 
 ```javascript
-  constructor(props) {
-  	super(props);
-	this.state = {
-		count: ‘1’
+constructor(props) {
+  super(props);
+  this.state = {
+    count: '1'
 	};
 }
 ```
