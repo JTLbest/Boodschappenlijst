@@ -46,8 +46,8 @@ React.createElement(
 Met de functie createElement maak je een HTML element aan. Hierbij kan je aangeven wat voor element het is en in dit geval is dat een div. Daarna kan je aangeven wat voor attributen het element kan hebben. Een element kan zichtbaar of onzichtbare attributen bevatten. Zo kan je aangeven wat bijvoorbeeld de key met zijn van een lijst. De key waarde kan je weet gebruiken in de logica van React, maar de gebruiker krijgt deze key nooit te zien.
 
 ```javascript
-constructor(props) {
-	super(props);
+  constructor(props) {
+  	super(props);
 	this.state = {
 		count: ‘1’
 	};
@@ -86,23 +86,23 @@ Een lang verhaal kort te maken. React is een goede stap, maar voor mij is het so
 
 ## Bronnen
 
-**Create a Simple To-Do App With React**
+**Create a Simple To-Do App With React**  
 https://scotch.io/tutorials/create-a-simple-to-do-app-with-react#toc-prerequisites
 
-**To-Do List**
+**To-Do List**  
 https://codepen.io/codebeast/pen/PzVyRm 
 
-**Babel**
+**Babel**  
 https://babeljs.io
 
-**React Documentation**
+**React Documentation**  
 https://facebook.github.io/react/docs/
 
-**React (JavaScript library)**
+**React (JavaScript library)**  
 https://en.wikipedia.org/wiki/React_(JavaScript_library) 
 
-**Local Storage And How To Use It On Websites**
+**Local Storage And How To Use It On Websites**  
 https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/ 
 
-**Iterating & Rendering with Loops in React components**
+**Iterating & Rendering with Loops in React components**  
 https://thinkster.io/tutorials/iterating-and-rendering-loops-in-react 
