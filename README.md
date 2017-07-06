@@ -38,10 +38,11 @@ Zo bestaat je code uit een Class waar de logica van je applicatie in staat die r
 
 ```javascript
 React.createElement(
-	'div', {
+	'div',
+  {
     className: 'wrapper'
   },
-	'Dit blok bevat geen items..’
+  'Dit blok bevat geen items..'
 );
 ```
 Met de functie createElement maak je een HTML element aan. Hierbij kan je aangeven wat voor element het is en in dit geval is dat een div. Daarna kan je aangeven wat voor attributen het element kan hebben. Een element kan zichtbaar of onzichtbare attributen bevatten. Zo kan je aangeven wat bijvoorbeeld de key met zijn van een lijst. De key waarde kan je weet gebruiken in de logica van React, maar de gebruiker krijgt deze key nooit te zien.
