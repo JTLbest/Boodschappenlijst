@@ -1,0 +1,339 @@
+body {
+  background: #f9f9f9;
+  margin: 3em;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#container {
+  padding: 2em;
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: 'Courier';
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+}
+#container h1 {
+  display: inline-block;
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.25em;
+}
+#container span {
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 1em;
+  background: #f00;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.75em;
+  vertical-align: top;
+  margin-left: 1em;
+  margin-top: 0.35em;
+  float: right;
+}
+#container ul {
+  display: block;
+  margin: 0 0 4.5em 0;
+  padding: 0;
+}
+#container ul li {
+  display: block;
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 0.25em 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#container li .wrap {
+  display: block;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  background: #f9f9f9;
+  margin: 0 auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#container #share {
+  display: block;
+  height: 1.25em;
+  padding: 1em;
+  line-height: 1.25em;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: red;
+  border-radius: 5px;
+}
+#container ul li.empty {
+  background: none;
+  padding: 1em 0;
+  text-align: center;
+  border-radius: 0;
+  color: #999;
+  border: none;
+}
+#container ul li p {
+  display: inline-block;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 1em 0;
+}
+#container li .check {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 1em 0.25em 1em 1em;
+  border-radius: 100%;
+  text-indent: -9999px;
+  box-shadow: inset 0 0 0 2px #ddd;
+  background: #fff;
+  vertical-align: middle;
+  cursor: pointer;
+}
+#container li.checked .wrap {
+  background: #fcfcfc;
+  border: 2px solid #eee;
+}
+#container li.checked .wrap p {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+#container li.checked .check {
+  cursor: default;
+  background: #888;
+  box-shadow: none;
+}
+#container li.checked .check:after {
+  content: '';
+  position: absolute;
+  left: 0.45em;
+  top: 0.75em;
+  display: block;
+  height: 0.4em;
+  width: 0.2em;
+  background: #fff;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+}
+#container li.checked .check:before {
+  content: '';
+  position: absolute;
+  left: 0.8em;
+  top: 0.4em;
+  display: block;
+  height: 0.8em;
+  width: 0.2em;
+  background: #fff;
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+#container ul li button.delete {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  display: none;
+  width: 2.15em;
+  height: 2.15em;
+  border: none;
+  outline: none;
+  line-height: 1em;
+  margin: 1.45em;
+  background: red;
+  border-radius: 100%;
+  text-indent: -9999px;
+  overflow: hidden;
+  float: right;
+  cursor: pointer;
+}
+#container ul li button.delete:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.15em;
+  height: 1.1em;
+  top: 0.55em;
+  left: 1em;
+  background: #fff;
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+#container ul li button.delete:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.15em;
+  height: 1.1em;
+  top: 0.55em;
+  left: 1em;
+  background: #fff;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+}
+#container ul li:hover button.delete {
+  display: block;
+}
+#container ul li div.vote {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 2em;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+#container ul li button.up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 1em;
+  font-size: 1em;
+  height: 1em;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+#container ul li button.down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 1em;
+  font-size: 1em;
+  height: 1em;
+  text-indent: -9999px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+#container ul li button.up:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  transform: rotate(45deg);
+  transform-origin: center center;
+  background: #000;
+  height: 0.5em;
+  width: 0.15em;
+}
+#container ul li button.up:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.6em;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+  background: #000;
+  height: 0.5em;
+  width: 0.15em;
+}
+#container ul li button.down:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+  background: #000;
+  height: 0.5em;
+  width: 0.15em;
+}
+#container ul li button.down:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.6em;
+  transform: rotate(45deg);
+  transform-origin: center center;
+  background: #000;
+  height: 0.5em;
+  width: 0.15em;
+}
+#container ul li:hover button.up,
+#container ul li:hover button.down {
+  display: block;
+}
+#container input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Courier';
+  border-radius: 5px;
+  padding: 1em;
+  font-weight: 400;
+  margin: 0.5em auto 1.5em;
+  border: 2px solid #ddd;
+  background: #fff;
+}
+#container p.count {
+  width: 1.5em;
+  border-radius: 0;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 1em 0.5em 1em 1em;
+  border: none;
+  box-sizing: content-box;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+}
+#container p.count:after {
+  content: 'x';
+}
+#container ul li.checked button.delete,
+#container ul li.checked button.up,
+#container ul li.checked button.down {
+  display: none;
+}
+
+
+@media (max-width: 440px){
+  body { font-size: 1em; margin: 0; background: #fff; }
+  #container { padding: 1.25em; border-radius: 0; border: none; }
+  #container h1 { font-size: 1.25em; line-height: 1.6em; margin-top: 0.2em; }
+  #container span { float: right;}
+  #container ul li button { display: block;}
+  #container ul li button.up, #container ul li button.down, #container ul li button.delete { display: block; }
+  #container #share { position: fixed; left: 1.25em; right: 1.25em; bottom: 1.25em; }
+  #container ul.active li button.delete,
+  #container ul.active li button.up,
+  #container ul.active li button.down {
+    display: block;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 4em 0;
+}
+
+@media print {
+  html, body { margin: 0; padding: 0; font-size: 1em; background: #fff; }
+  #container { border: none; border-radius: 0; }
+  #container #share { display: none; }
+  #container ul li button.up, #container ul li button.down, #container ul li button.delete { display: none; }
+}
