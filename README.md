@@ -38,8 +38,8 @@ Zo bestaat je code uit een Class waar de logica van je applicatie in staat die r
 
 ```javascript
 React.createElement(
-	"div", {
-    className: “wrapper”
+	'div', {
+    className: 'wrapper'
   },
 	'Dit blok bevat geen items..’
 );
